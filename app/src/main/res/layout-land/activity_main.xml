@@ -11,10 +11,11 @@
         android:id="@+id/logo"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:src="@drawable/icone"
         android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/icone"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -22,25 +23,24 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:fontFamily="cursive"
         android:text="@string/app_name"
         android:textColor="@color/black"
-        android:textSize="48sp"
-        android:fontFamily="cursive"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        android:maxLines="2" />
+        app:layout_constraintTop_toTopOf="@id/logo" />
 
     <ImageView
         android:id="@+id/imageMoney"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginStart="100dp"
         android:src="@drawable/dinheiro"
         app:layout_constraintEnd_toStartOf="@+id/valueCount"
         app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/logo"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:ems="10"
-        android:hint="@string/value"
+        android:hint="Valor"
         android:paddingVertical="20sp"
         android:layout_marginStart="5dp"
         android:inputType="numberDecimal"
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:ems="10"
-        android:hint="@string/qtd"
+        android:hint="Quantidade"
         android:inputType="number"
         android:textAlignment="center"
         android:paddingVertical="20sp"
@@ -88,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="casual"
-        android:text="@string/result"
+        android:text="Valor pra cada"
         android:layout_marginTop="50dp"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -100,13 +100,14 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="83dp"
+        android:layout_marginStart="40dp"
         android:backgroundTint="#F3DB0F"
         android:clickable="true"
         android:importantForAccessibility="no"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_listen"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_listen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/valueCount"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModeShareDrawable" />
 
     <Button
@@ -115,11 +116,11 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/teal_700"
         android:onClick="clickFalar"
-        android:text="@string/listen"
-        app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Ouvir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/floatingActionButton"
         app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
-        app:layout_constraintTop_toTopOf="@+id/floatingActionButton" />
+        app:layout_constraintStart_toStartOf="@+id/floatingActionButton"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

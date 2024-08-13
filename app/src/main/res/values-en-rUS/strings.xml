@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lets crack</string>
+    <string name="value">Value</string>
+    <string name="qtd">Amount</string>
+    <string name="result">Value for each</string>
+    <string name="listen">Listen</string>
+</resources>
